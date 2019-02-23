@@ -1,28 +1,22 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+import CreateGlobalStyle from './styles/global';
+
+import SideBar from './components/Sidebar';
+import Header from './components/Header';
+
+import { Wrapper, Container, Content } from './styles/components';
+
+const App = () => (
+    <Wrapper>
+        <CreateGlobalStyle/>
+        <Container>
+            <SideBar />
+            <Content>
+                <Header />
+            </Content>
+        </Container>
+    </Wrapper>
+);
 
 export default App;
